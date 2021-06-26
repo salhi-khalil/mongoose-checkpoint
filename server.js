@@ -5,7 +5,7 @@ let app = express();
 let port = 5600;
 const Person = require('./models/personModel');
 connectDB();
-
+app.use(express.json());
 
 app.listen(port, (err) =>
   err ? console.log("error in server running", err) : console.log(`server is running on ${port}`)
